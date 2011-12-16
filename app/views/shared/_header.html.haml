@@ -17,16 +17,9 @@
             %li
               =link_to "Logout", session_path, :method => :delete
   #top-announcement
-    Call for Proposals now Open!
+    Initial Schedule coming soon (12/23)
     #sub-top-announcement
-      -if Date.today < Date.parse('2011-12-14')
-        You 
-        -remaining = (Date.parse("2011-12-13") - Date.today).to_i
-        -if remaining < 30 
-          only
-        have 
-        =remaining
-        days left to submit your proposal.
+      
 #navbar
   %ul#suckerfish
     %li
