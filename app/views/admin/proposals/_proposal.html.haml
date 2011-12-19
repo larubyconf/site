@@ -10,6 +10,10 @@
   %td
     =proposal.status
   %td
+    =proposal.date_submitted
+    %br
+    =proposal.updated_at
+  %td
     =proposal.presentation.nil? ? "No" : link_to(proposal.presentation.id,edit_admin_presentation_path(proposal.presentation))
   %td
     =link_to 'Edit', edit_admin_proposal_path(proposal)
