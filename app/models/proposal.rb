@@ -96,7 +96,7 @@ class Proposal < ActiveRecord::Base
 
   private
 
-  def proposal_row(proposal)
+  def self.proposal_row(proposal)
     [
      proposal.id,
      proposal.title,
