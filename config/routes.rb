@@ -59,4 +59,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'schedule', :controller => 'presentations', :action => 'index'
   map.connect 'menu/venue', :controller => 'root', :aciton => 'venue'
   map.connect 'menu/sponsors', :controller => 'sponsors', :action => 'index'
+
+  map.connect 'training/jumpstartlab', :controller => 'training', :action => 'jumpstartlab'
+
 end

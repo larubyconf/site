@@ -861,3 +861,11 @@ ul.activities li {
   border-bottom: 1px solid;
   border-bottom-color: silver;
   margin-bottom: 10px; }
+
+.training {
+  background: white;
+  padding: 10px; }
+
+ul.training {
+  margin-left: 30px;
+  margin-top: -15px; }
