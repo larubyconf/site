@@ -61,5 +61,6 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'menu/sponsors', :controller => 'sponsors', :action => 'index'
 
   map.connect 'training/jumpstartlab', :controller => 'training', :action => 'jumpstartlab'
+  map.connect 'training/thank-you', :controller => 'training', :action => 'thankyou'
 
 end

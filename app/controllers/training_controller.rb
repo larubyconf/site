@@ -7,4 +7,8 @@ class TrainingController < ApplicationController
 
   def edgecase
   end
+
+  def thankyou
+    @workshop = Workshop.find_by_tag(params[:class])
+  end
 end
