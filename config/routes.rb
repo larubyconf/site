@@ -60,7 +60,10 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'menu/venue', :controller => 'root', :aciton => 'venue'
   map.connect 'menu/sponsors', :controller => 'sponsors', :action => 'index'
 
-  map.connect 'training/jumpstartlab', :controller => 'training', :action => 'jumpstartlab'
   map.connect 'training/thank-you', :controller => 'training', :action => 'thankyou'
 
+  map.connect 'training/jumpstartlab', :controller => 'training', :action => 'jumpstartlab'
+  map.connect 'training/steven-baker', :controller => 'training', :action => 'steven_baker'
+  map.connect 'training/rubykoans', :controller => 'training', :action => 'rubykoans'
+  map.connect 'training/vitaltesting', :controller => 'training', :action => 'vitaltesting'
 end
