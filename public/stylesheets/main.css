@@ -244,11 +244,11 @@ abbr, acronym {
 
 /* Structural Elements */
 body {
-  background: transparent url(/images/la-ruby-background.png) no-repeat top center;
+  background: white repeat-x top left;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 62.5%;
-  color: black; }
+  color: #555555; }
 
 a {
   color: blue;
@@ -263,6 +263,7 @@ div#container {
   text-align: center; }
   div#container div#header {
     width: 1000px;
+    background: transparent url(/images/la-ruby-conf-2012-header.png) no-repeat top center;
     height: 290px;
     text-align: left; }
     div#container div#header span.description {
@@ -284,7 +285,6 @@ div#container {
       div#container div#header div#meta a {
         font-weight: normal; }
     div#container div#header #top-announcement {
-      background: transparent url(/images/white-50p.png) repeat;
       float: left;
       margin-top: 25px;
       margin-left: 25px;
@@ -297,7 +297,7 @@ div#container {
         font-size: 0.75em; }
   div#container div#navbar {
     width: 900px;
-    height: 22px;
+    height: 35px;
     background: transparent url(/images/navbar.png) no-repeat top center;
     position: relative;
     top: -17px;
@@ -359,9 +359,9 @@ div#container {
     margin: 0 auto;
     text-align: left; }
     div#container div#main div#leftcol {
-      background: transparent url(/images/white-50p.png) repeat;
       float: left;
       width: 200px;
+      background-color: #f4f4f4;
       margin-right: 20px;
       min-height: 600px; }
       div#container div#main div#leftcol h2 {
@@ -372,9 +372,7 @@ div#container {
         font-size: 1.4em;
         letter-spacing: 3px;
         padding: 20px 0;
-        border-bottom: 1px solid #eeeeee;
-        padding: 20px 0;
-        margin-bottom: 5px;
+        border-bottom: 1px solid white;
         color: #4b4b4b; }
       div#container div#main div#leftcol div#announcement {
         padding: 20px;
@@ -402,26 +400,9 @@ div#container {
       div#container div#main a#register-button:hover {
         background: transparent url(/images/register-button-on.png) no-repeat top left; }
     div#container div#main div#rightcol {
-      background: transparent url(/images/white-50p.png) repeat;
       float: right;
       width: 200px;
-      margin-left: 20px;
-      min-height: 600px; }
-      div#container div#main div#rightcol div#announcement {
-        padding: 20px;
-        color: #333333; }
-        div#container div#main div#rightcol div#announcement p {
-          font-size: 1.4em;
-          line-height: 1.5em;
-          margin-bottom: 0.8em; }
-        div#container div#main div#rightcol div#announcement h3 {
-          font-weight: bold;
-          font-size: 1.25em;
-          line-height: 1.5em;
-          color: black;
-          margin-bottom: 5px; }
-      div#container div#main div#rightcol p.sponsor {
-        padding: 2px; }
+      margin-left: 20px; }
       div#container div#main div#rightcol h2 {
         font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif;
         font-weight: normal;
@@ -429,7 +410,7 @@ div#container {
         text-align: center;
         font-size: 1.4em;
         letter-spacing: 3px;
-        border-bottom: 1px solid #eeeeee;
+        border: 1px solid #eeeeee;
         padding: 20px 0;
         margin-bottom: 5px;
         color: #4b4b4b; }
@@ -439,7 +420,6 @@ div#container {
         border: 1px solid #eeeeee;
         padding: 5px 0; }
       div#container div#main div#rightcol dl.sponsor {
-        background: transparent url(/images/white-50p.png) repeat;
         text-align: center;
         font-size: 1.2em;
         font-family: "Lucida Sans", "Lucida Grande", Arial, Helvetica, sans-serif; }
@@ -464,7 +444,6 @@ div#container {
               color: #666666;
               border: 2px dashed #999999; }
     div#container div#main div#singlecol {
-      background: transparent url(/images/white-50p.png) repeat;
       border: black 1 px solid;
       width: 940px;
       margin: 0 auto;
@@ -516,16 +495,11 @@ div#container {
       div#container div#main div#singlecol .dynamic-content dt {
         font-size: 1.3em; }
     div#container div#main div#midcol {
-      background: transparent url(/images/white-50p.png) repeat;
-      min-height: 600px;
       border: black 1 px solid;
       width: 560px;
       margin: 0 auto;
-      padding: 0 10px;
       font-size: 1.4em;
       line-height: 1.5em; }
-      div#container div#main div#midcol dl {
-        padding: 0 5px 20px 5px; }
       div#container div#main div#midcol dt .news-item-headline {
         color: #063d7c;
         font-weight: bold;
@@ -533,9 +507,8 @@ div#container {
         line-height: 1.2em;
         margin: 0 0 0.2em; }
       div#container div#main div#midcol dt .news-item-date {
-        font-size: 1.2em;
-        font-weight: bold;
-        color: black;
+        font-size: 0.75em;
+        color: silver;
         margin-top: 0px;
         margin-bottom: 0px; }
       div#container div#main div#midcol dd {
@@ -861,11 +834,3 @@ ul.activities li {
   border-bottom: 1px solid;
   border-bottom-color: silver;
   margin-bottom: 10px; }
-
-.training {
-  background: white;
-  padding: 10px; }
-
-ul.training {
-  margin-left: 30px;
-  margin-top: -15px; }
