@@ -12,6 +12,11 @@ GEM
       activesupport (= 2.3.14)
     activesupport (2.3.14)
     addressable (2.2.6)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
+    builder (3.0.0)
     exceptional (2.0.32)
       rack
     facebooker (1.0.75)
@@ -57,11 +62,13 @@ GEM
       sqlite3-ruby (~> 1.2)
     term-ansicolor (1.0.7)
     will_paginate (2.3.16)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   exceptional (~> 2.0)
   facebooker
   fastercsv
