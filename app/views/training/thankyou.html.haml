@@ -1,0 +1,16 @@
+%h2
+  Thank you for registering for
+  =@workshop.title
+%p
+  This workshop is being held on
+  =@workshop.scheduled_date.strftime("%B %-d, %Y")
+%p
+  Please review the workshop
+  =link_to 'description', @workshop.url
+  to make sure you have everything you need when you attend.
+%p
+  Your instructor will be 
+  =@workshop.instructor_name
+  -unless @workshop.instructor_twitter.blank?
+    \/ Twitter: 
+    =link_to "@#{@workshop.instructor_twitter}", "http://twitter.com/#{@workshop.instructor_twitter}", :target => "_blank"

@@ -24,6 +24,25 @@ class Proposal < ActiveRecord::Base
 
   STATUSES = ['Pending','Accepted','Rejected']
 
+  PROPOSAL_HEADER = [
+                     'ID',
+                     'Title',
+                     'Abstract',
+                     'Target Audience',
+                     'Code Weight',
+                     'Date Submitted',
+                     'Reviewed',
+                     'Date Reviewed',
+                     'Reviewed by',
+                     'User',
+                     'User E-mail',
+                     'Created at',
+                     'Updated at',
+                     'Status',
+                     'Removed',
+                     'Votes'
+                     ]
+
   def self.find_with_destroyed *args
     self.with_exclusive_scope { find(*args) }
   end
@@ -64,7 +83,39 @@ class Proposal < ActiveRecord::Base
     self.votes.map { |v| v.user }.include?(user)
   end
 
+  def self.dump
+    export = FasterCSV.generate(:force_quotes => true) do |csv|
+      csv << PROPOSAL_HEADER
+
+      Proposal.find(:all).each do |proposal|
+        csv << proposal_row(proposal)
+      end
+    end
+    export
+  end
+
   private
+
+  def self.proposal_row(proposal)
+    [
+     proposal.id,
+     proposal.title,
+     proposal.abstract,
+     proposal.target_audience,
+     proposal.code_weight,
+     proposal.submitted_at,
+     proposal.reviewed,
+     proposal.date_reviewed,
+     proposal.user.username,
+     proposal.user.email,
+     proposal.created_at,
+     proposal.updated_at,
+     proposal.status,
+     proposal.removed,
+     proposal.votes.count
+    ]
+  end
+
   def set_date
     self.date_submitted = Time.zone.now
     self.status = STATUSES[0]

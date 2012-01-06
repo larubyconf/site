@@ -17,16 +17,9 @@
             %li
               =link_to "Logout", session_path, :method => :delete
   #top-announcement
-    Tentative dates for next year - February 2-4, 2012
+    Schedule is posted!
     #sub-top-announcement
-      -if Date.today < Date.parse('2010-12-14')
-        You 
-        -remaining = (Date.parse("2010-12-13") - Date.today).to_i
-        -if remaining < 30 
-          only
-        have 
-        =remaining
-        days left to submit your proposal.
+      Less than 30 days before the workshops and Conference begin!
 #navbar
   %ul#suckerfish
     %li
@@ -44,6 +37,6 @@
     %li
       =link_to_unless_current 'Sponsors', sponsors_path
     %li
-      =link_to_unless_current "Last Year", last_year_path%p
+      =link_to_unless_current "Last Year", last_year_path
     %li
       =link_to_unless_current 'Contact Us', contact_us_path

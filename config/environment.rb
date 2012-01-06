@@ -1,4 +1,4 @@
-RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.3.14' unless defined? RAILS_GEM_VERSION
 
 require File.join(File.dirname(__FILE__), 'boot')
 
@@ -24,8 +24,8 @@ Rails::Initializer.run do |config|
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default_url_options   = { :host => 'localhost' }
 
-  RFP_START = Date.parse("9/27/2010")
-  RFP_END = Date.parse("12/14/2010")
+  RFP_START = Date.parse("11/7/2011")
+  RFP_END = Date.parse("12/15/2011")
 end
 
 require 'will_paginate'
