@@ -12,7 +12,7 @@ class NewsItem < ActiveRecord::Base
   named_scope :display, 
               :conditions => [
                               'display_date <= ? and expire_date >= ?',
-                              Date.today-1, 
+                              Date.today+1, 
                               Date.today],
               :order => 'display_date desc'
 
