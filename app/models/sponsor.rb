@@ -25,7 +25,8 @@ class Sponsor < ActiveRecord::Base
   has_attached_file :logo, 
                     :storage => :s3,
                     :bucket => 'larubyconf',
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml"
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :path => ":class/:id-:style.:extension"
 
   SPONSOR_LEVELS = ['1-Ruby','2-Gold','3-Silver','4-Bronze','9-Media']
 
