@@ -22,8 +22,11 @@ class Sponsor < ActiveRecord::Base
                                           "4-Bronze"],
                           :order => 'sponsor_date desc'
 
-  has_attached_file :logo, :styles => {
-    :default_url => '/sponsors/'}
+  has_attached_file :logo, 
+                    :storage => :s3,
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :styles => {
+                    :default_url => '/sponsors/'}
 
   SPONSOR_LEVELS = ['1-Ruby','2-Gold','3-Silver','4-Bronze','9-Media']
 
