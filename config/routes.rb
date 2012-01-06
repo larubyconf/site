@@ -18,7 +18,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :sponsors
-  map.resources :proposals, 
+  map.resources :proposals,
     :member => { :view_comments => :post },
     :member => { :liked => :get } do |proposal|
     proposal.resources :comments
@@ -59,4 +59,11 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'schedule', :controller => 'presentations', :action => 'index'
   map.connect 'menu/venue', :controller => 'root', :aciton => 'venue'
   map.connect 'menu/sponsors', :controller => 'sponsors', :action => 'index'
+
+  map.connect 'training/thank-you', :controller => 'training', :action => 'thankyou'
+
+  map.connect 'training/jumpstartlab', :controller => 'training', :action => 'jumpstartlab'
+  map.connect 'training/steven-baker', :controller => 'training', :action => 'steven_baker'
+  map.connect 'training/rubykoans', :controller => 'training', :action => 'rubykoans'
+  map.connect 'training/vitaltesting', :controller => 'training', :action => 'vitaltesting'
 end
