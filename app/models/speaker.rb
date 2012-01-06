@@ -6,12 +6,16 @@ class Speaker < ActiveRecord::Base
   has_many :presentation_speakers
   has_many :presentations, :through => :presentation_speakers
 
-  has_attached_file :photo, :styles => {
-    :large => '300x300>',
-    :medium => '200x200>',
-    :thumb => '100x100#',
-    :icon => '80x80>',
-    :tiny => '50x50>'}
+  has_attached_file :photo,
+                    :storage => :s3,
+                    :bucket => 'larubyconf',
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :styles => {
+                      :large => '300x300>',
+                      :medium => '200x200>',
+                      :thumb => '100x100#',
+                      :icon => '80x80>',
+                      :tiny => '50x50>'}
 
   validates_presence_of :bio, :photo
 

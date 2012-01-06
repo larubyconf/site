@@ -8,6 +8,9 @@ class Profile < ActiveRecord::Base
   has_many :links
 
   has_attached_file :avatar, 
+                    :storage => :s3,
+                    :bucket => 'larubyconf',
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
                     :styles => {
                             :large => '300x300>',
                             :medium => '200x200>', 

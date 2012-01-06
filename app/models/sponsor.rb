@@ -24,6 +24,7 @@ class Sponsor < ActiveRecord::Base
 
   has_attached_file :logo, 
                     :storage => :s3,
+                    :bucket => 'larubyconf',
                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
                     :styles => {
                     :default_url => '/sponsors/'}
