@@ -12,3 +12,5 @@ gem 'exceptional',   "~> 2.0"
 gem 'newrelic_rpm'
 gem 'fastercsv'
 gem 'heroku'
+gem 'mysql'
+gem 'taps'
