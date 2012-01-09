@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.venue       '/venue',      :controller => "root", :action => "venue"
   map.home        '/home',       :controller => 'users', :action => 'current'
   map.last_year   'last-year',   :controller => 'root', :action => 'last_year'
+  map.info        'info',        :controller => 'root', :action => 'info'
 
   map.badges "/badges", :controller => 'root', :action => 'badges'
 

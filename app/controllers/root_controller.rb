@@ -22,6 +22,10 @@ class RootController < ApplicationController
     end
   end
 
+  def info
+    @tz = Time.zone.name
+  end
+
   def contact_us
   end
 

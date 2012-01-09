@@ -10,6 +10,7 @@ class Speaker < ActiveRecord::Base
                     :storage => :s3,
                     :bucket => 'larubyconf',
                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :path => ":class/:id-:style.:extension",
                     :styles => {
                       :large => '300x300>',
                       :medium => '200x200>',
