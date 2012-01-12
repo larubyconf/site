@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111230094555) do
+ActiveRecord::Schema.define(:version => 20120112053237) do
 
   create_table "activities", :force => true do |t|
     t.string   "message"
@@ -139,6 +139,11 @@ ActiveRecord::Schema.define(:version => 20111230094555) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.text     "blurb"
+    t.boolean  "logo_display",           :default => true
+    t.string   "page_logo_file_name"
+    t.string   "page_logo_content_type"
+    t.integer  "page_logo_file_size"
+    t.datetime "page_logo_updated_at"
   end
 
   create_table "users", :force => true do |t|
@@ -146,12 +151,12 @@ ActiveRecord::Schema.define(:version => 20111230094555) do
     t.string   "email"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.datetime "last_login_date", :limit => 255
+    t.datetime "last_login_date"
     t.string   "time_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "session_token"
-    t.boolean  "admin",                          :default => false
+    t.boolean  "admin",           :default => false
     t.integer  "profile_id"
   end
 

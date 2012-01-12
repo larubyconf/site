@@ -16,12 +16,23 @@
 
   .form-field
     %label{:for => 'sponsor_logo'}
-      Logo: 
+      Logo:
     =f.file_field :logo
     %br
-    =image_tag(@sponsor.logo.url)
+    =image_tag(@sponsor.logo.url) unless @sponsor.logo_file_name.nil?
+  .form-field
+    %label{:for => 'sponsor_page_logo'}
+      Page Logo:
+    =f.file_field :page_logo
+    %br
+    =image_tag(@sponsor.page_logo.url) unless @sponsor.page_logo_file_name.nil?
   .form-field
     %label{:for => 'sponsor_blurb'}
       Blurb:
     =f.text_area :blurb, :size => '60x5'
+  .form-field
+    %label
+      &nbsp;
+    =f.check_box :logo_display
+    Display Logo on Sponsor Page
   =submit_tag "Save"

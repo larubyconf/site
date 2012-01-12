@@ -22,6 +22,8 @@
         %th
           Logo
         %th
+          Display
+        %th
           Date
         %th
           Actions
@@ -34,7 +36,11 @@
           %td
             =sponsor.sponsor_level
           %td
-            =image_tag(sponsor.logo.url) unless sponsor.logo.nil?
+            =image_tag(sponsor.logo.url) unless sponsor.logo_file_name.nil?
+            %br
+            =image_tag(sponsor.page_logo.url) unless sponsor.page_logo_file_name.nil?
+          %td
+            =sponsor.logo_display
           %td
             =sponsor.sponsor_date.strftime('%m-%d-%Y') if sponsor.sponsor_date
           %td

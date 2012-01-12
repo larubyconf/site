@@ -1,7 +1,9 @@
 class Sponsor < ActiveRecord::Base
   attr_accessible :company_name, :sponsor_level, :sponsor_date,
   :logo_file_name, :logo_content_type, :logo_file_size, :logo_updated_at,
-  :logo, :url, :blurb
+  :logo, :url, :blurb, :logo_display, :page_logo_file_name,
+  :page_logo_content_type, :page_logo_file_size, :page_logo_updated_at,
+  :page_logo
 
   validates_presence_of :company_name
   validates_presence_of :sponsor_level
@@ -22,11 +24,17 @@ class Sponsor < ActiveRecord::Base
                                           "4-Bronze"],
                           :order => 'sponsor_date desc'
 
-  has_attached_file :logo, 
+  has_attached_file :logo,
                     :storage => :s3,
                     :bucket => 'larubyconf',
                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
                     :path => ":class/:id-:style.:extension"
+
+  has_attached_file :page_logo,
+                    :storage => :s3,
+                    :bucket => 'larubyconf',
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :path=> ":class/:id-page-:style.:extension"
 
   SPONSOR_LEVELS = ['1-Ruby','2-Gold','3-Silver','4-Bronze','9-Media']
 
