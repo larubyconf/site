@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.last_year   'last-year',   :controller => 'root', :action => 'last_year'
   map.info        'info',        :controller => 'root', :action => 'info'
 
+
   map.badges "/badges", :controller => 'root', :action => 'badges'
 
   map.resource :session, :member => { :reset => [:get, :post] }
