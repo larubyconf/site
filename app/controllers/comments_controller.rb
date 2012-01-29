@@ -28,7 +28,7 @@ class CommentsController < ApplicationController
     @comment = ProposalComment.find(params[:id])
     proposal = @comment.proposal
     @comment.destroy
-    render :partial => 'proposals/display_comments', 
+    render :partial => 'proposals/display_comments',
            :locals => { :proposal => proposal }
   end
 end

@@ -12,10 +12,10 @@ Rails::Initializer.run do |config|
   # UA-6891099-2 - videos.larubyconf.com
   # UA-6891099-3 - 2009.larubyconf.com
   # UA-6891099-4 - 2010.larubyconf.com
-  # UA-6891099-5 - larubyconf.dev 
+  # UA-6891099-5 - larubyconf.dev
   #             (or any environments where the key is not overridden)
 
-  # The default locale is :en and all translations from config/locales/*.rb,yml 
+  # The default locale is :en and all translations from config/locales/*.rb,yml
   # are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de

@@ -43,7 +43,7 @@ class Admin::UsersController < Admin::Controller
     if @user.destroy
       flash[:success] = "User successfully deleted from the system."
     else
-      flash[:error] = "Failed to delete user: " + 
+      flash[:error] = "Failed to delete user: " +
         @user.errors.full_messages.to_sentence
     end
 

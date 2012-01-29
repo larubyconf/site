@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   has_many :reviewed_proposals,
            :class_name => 'Proposal'
 
-  has_many :activities, 
+  has_many :activities,
            :order => 'created_at desc',
            :conditions => ['suppressed = ?', true]
 
@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
     if user && user.password?(password)
       user.last_login_date = Time.zone.now
       user.save
-      user.activities.create!(:message => 'logged in successfully') 
+      user.activities.create!(:message => 'logged in successfully')
       user
     end
   end

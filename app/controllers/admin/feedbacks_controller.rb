@@ -1,5 +1,5 @@
 class Admin::FeedbacksController < Admin::Controller
-  
+
   layout "admin"
 
   PAGE_SIZE = 20

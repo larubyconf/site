@@ -15,20 +15,20 @@ class VoteTest < ActiveSupport::TestCase
     v = Vote.new
     v.proposal = proposals(:default)
     v.user = users(:default)
-    
+
     assert v.save
 
     v = Vote.new
     v.proposal = proposals(:default)
     v.user = users(:default)
-    
+
     assert !v.save
 
     v = Vote.new
     v.proposal = proposals(:two)
     v.user = users(:default)
-    
+
     assert v.save
   end
-    
+
 end
