@@ -7,7 +7,7 @@ module ApplicationHelper
       results += " until the Workshops and Conference begin."
     else
       results = "LA Ruby Conference 2011 was <strong>"
-      results += distance_of_time_in_words(Date.today,Date.parse('2011-02-03')) 
+      results += distance_of_time_in_words(Date.today,Date.parse('2011-02-03'))
       results += "</strong> ago."
     end
     return results
@@ -57,7 +57,7 @@ module ApplicationHelper
   end
 
   def google_search_link value
-    link_to value,  
+    link_to value,
             "http://google.com/search?q=#{value.gsub(' ','+').downcase}",
             :target => "_blank"
   end

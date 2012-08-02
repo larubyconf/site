@@ -9,8 +9,8 @@
   =link_to 'description', @workshop.url
   to make sure you have everything you need when you attend.
 %p
-  Your instructor will be 
+  Your instructor will be
   =@workshop.instructor_name
   -unless @workshop.instructor_twitter.blank?
-    \/ Twitter: 
+    \/ Twitter:
     =link_to "@#{@workshop.instructor_twitter}", "http://twitter.com/#{@workshop.instructor_twitter}", :target => "_blank"

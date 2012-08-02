@@ -15,7 +15,7 @@ class Dashboard::RootController < Dashboard::Controller
     holding.map { |i| i[0]=Proposal.find(i[0]).title }
     @popular_proposals = holding
 
-    @recent_users = User.find(:all, 
+    @recent_users = User.find(:all,
                               :conditions => 'last_login_date is not null',
                               :order => 'last_login_date desc',
                               :limit => 10)

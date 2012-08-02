@@ -7,14 +7,14 @@ class Profile < ActiveRecord::Base
 
   has_many :links
 
-  has_attached_file :avatar, 
+  has_attached_file :avatar,
                     :storage => :s3,
                     :bucket => 'larubyconf',
                     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
                     :path => ":class/:id-:style.:extension",
                     :styles => {
                             :large => '300x300>',
-                            :medium => '200x200>', 
+                            :medium => '200x200>',
                             :thumb => '100x100>',
                             :icon => '80x80>',
                             :tiny => '50x50>'
@@ -61,7 +61,7 @@ class Profile < ActiveRecord::Base
   def record_activity
     if self.user
       self.user.activities.create!(
-                                   :message => "updated their profile, 
+                                   :message => "updated their profile,
                                    now #{percent_complete.to_i}% complete")
     end
   end

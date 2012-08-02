@@ -8,7 +8,7 @@
     =liked_by_message proposal, session.user
   .abstract
     -unless @all
-      =RDiscount.new(proposal.tiny_abstract).to_html 
+      =RDiscount.new(proposal.tiny_abstract).to_html
       -unless proposal.tiny_abstract == proposal.abstract
         =link_to 'Read full proposal', proposal_path(proposal)
     -else
