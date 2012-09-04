@@ -1,8 +1,8 @@
 = App Version
 
 This is a simple plugin that makes it easy to manage the version number of your
-Rails application. The version numbers supported by this plugin look like 
-'2.0.1 M4 (600) of branch by coder on 2008-10-27'. 
+Rails application. The version numbers supported by this plugin look like
+'2.0.1 M4 (600) of branch by coder on 2008-10-27'.
 
 The components of the version number are:
 
@@ -16,11 +16,11 @@ The components of the version number are:
 	2008-10-27 => the date of the release
 
 Only the major and minor numbers are required. The rest can be omitted and the
-plugin will attempt to do the right thing. 
+plugin will attempt to do the right thing.
 
 == Usage
 
-To use, simply place a file in RAILS_ROOT/config called version.yml with the 
+To use, simply place a file in RAILS_ROOT/config called version.yml with the
 following format:
 
   major:     2
@@ -53,14 +53,14 @@ methods to retrieve the individual components of the version number.
 
 == Capistrano Usage
 
-When the app_version plugin is installed, it copies a templated edition of the 
+When the app_version plugin is installed, it copies a templated edition of the
 version.yml file into /lib/templates/version.yml.erb, the initial file shows a
-tag for retrieving the revision count with git. It also shows displaying the 
+tag for retrieving the revision count with git. It also shows displaying the
 branch as specified with "set :branch" in your capistrano deploy.rb, see the
 comments in the erb file for more nifty tricks.
 
 When you do a cap deploy, there is a capistrano recipe built-in to the app_version
-plugin, which will render the templated version.yml into the standard location as 
+plugin, which will render the templated version.yml into the standard location as
 mentioned above. This happens automatically after the deploy is done.
 
 Both the standard and extended capistrano usage can co-exist in the same project
@@ -71,7 +71,7 @@ deploy your app.
 
 This plugin includes 4 new rake tasks:
 
-rake app:install 		- will copy the version.yml and version.yml.erb into more user 
+rake app:install 		- will copy the version.yml and version.yml.erb into more user
 									 		accessible locations (/config, and /lib/templates)
 
 rake app:uninstall 	- will remove the files copied in the install task
@@ -85,5 +85,5 @@ rake app:version		- will output the version number of the current rails
 
 = License
 
-This plugin is released under the terms of the Ruby license. See 
+This plugin is released under the terms of the Ruby license. See
 http://www.ruby-lang.org/en/LICENSE.txt.

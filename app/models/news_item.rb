@@ -9,10 +9,10 @@ class NewsItem < ActiveRecord::Base
 
   belongs_to :user
 
-  named_scope :display, 
+  named_scope :display,
               :conditions => [
                               'display_date <= ? and expire_date >= ?',
-                              Date.today+1, 
+                              Date.today+1,
                               Date.today],
               :order => 'display_date desc'
 
@@ -30,8 +30,8 @@ class NewsItem < ActiveRecord::Base
 
   def notify_community action
     self.user.activities.create!(
-                                 :message => 
-                                 "just #{action} a conference announcement, " + 
+                                 :message =>
+                                 "just #{action} a conference announcement, " +
                                  "see <a href='/'>home page</a> " +
                                  "for more information"
                                  )

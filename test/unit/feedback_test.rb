@@ -13,7 +13,7 @@ class FeedbackTest < ActiveSupport::TestCase
   test_validations_for :body
 
   def test_application_value
-    feedback = create_feedback 
+    feedback = create_feedback
 
     assert_equal "larubyconf2010", feedback.application
   end

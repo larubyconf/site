@@ -1,5 +1,5 @@
 # this is a capistrano recipe that will use the templated version.yml.erb
-# to produce the actual version.yml that the app_version plugin uses to 
+# to produce the actual version.yml that the app_version plugin uses to
 # store version information.
 
 namespace :app_version do
