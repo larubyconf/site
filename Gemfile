@@ -1,4 +1,6 @@
-source :gemcutter
+source 'https://rubygems.org'
+
+ruby '2.1.5'
 
 gem 'rack',          "=1.1.2"
 gem 'rails',         "=2.3.14"
