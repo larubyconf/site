@@ -11,7 +11,6 @@ GEM
     activeresource (2.3.14)
       activesupport (= 2.3.14)
     activesupport (2.3.14)
-    addressable (2.2.6)
     aws-s3 (0.6.2)
       builder
       mime-types
@@ -23,15 +22,8 @@ GEM
       json_pure (>= 1.0.0)
     fastercsv (1.5.4)
     haml (3.0.0)
-    heroku (2.17.0)
-      launchy (>= 0.3.2)
-      rest-client (~> 1.6.1)
-      rubyzip
-      term-ansicolor (~> 1.0.5)
     intercession (2.0.0)
     json_pure (1.6.4)
-    launchy (2.0.5)
-      addressable (~> 2.2.6)
     mime-types (1.17.2)
     mysql (2.8.1)
     newrelic_rpm (3.3.1)
@@ -47,7 +39,6 @@ GEM
     rdiscount (1.6.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rubyzip (0.9.5)
     sequel (3.20.0)
     sinatra (1.0)
       rack (>= 1.0)
@@ -60,7 +51,6 @@ GEM
       sequel (~> 3.20.0)
       sinatra (~> 1.0.0)
       sqlite3-ruby (~> 1.2)
-    term-ansicolor (1.0.7)
     will_paginate (2.3.16)
     xml-simple (1.1.1)
 
@@ -73,7 +63,6 @@ DEPENDENCIES
   facebooker
   fastercsv
   haml (= 3.0)
-  heroku
   intercession (~> 2.0)
   mysql
   newrelic_rpm
