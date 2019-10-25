@@ -6,7 +6,7 @@ gem 'rack',          "=1.1.2"
 gem 'rails',         "=2.3.14"
 gem "intercession",  "~> 2.0"      # Session as model
 gem "sqlite3-ruby"                 # database support
-gem "haml",          "=3.0"        # HAML
+gem "haml",          "5.0.0"      # HAML
 gem 'will_paginate', '~> 2.3'
 gem 'rdiscount'
 gem 'facebooker'

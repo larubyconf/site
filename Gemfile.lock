@@ -21,7 +21,9 @@ GEM
     facebooker (1.0.75)
       json_pure (>= 1.0.0)
     fastercsv (1.5.4)
-    haml (3.0.0)
+    haml (5.0.0)
+      temple (>= 0.8.0)
+      tilt
     intercession (2.0.0)
     json_pure (1.6.4)
     mime-types (1.17.2)
@@ -51,6 +53,8 @@ GEM
       sequel (~> 3.20.0)
       sinatra (~> 1.0.0)
       sqlite3-ruby (~> 1.2)
+    temple (0.8.2)
+    tilt (2.0.10)
     will_paginate (2.3.16)
     xml-simple (1.1.1)
 
@@ -62,7 +66,7 @@ DEPENDENCIES
   exceptional (~> 2.0)
   facebooker
   fastercsv
-  haml (= 3.0)
+  haml (= 5.0.0)
   intercession (~> 2.0)
   mysql
   newrelic_rpm
