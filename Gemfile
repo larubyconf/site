@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 
-gem 'rack',          "=1.1.2"
+gem 'rack',          "1.1.6"
 gem 'rails',         "=2.3.14"
 gem "intercession",  "~> 2.0"      # Session as model
 gem "sqlite3-ruby"                 # database support
